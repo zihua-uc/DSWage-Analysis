@@ -1,8 +1,6 @@
-# Final Project: A Geographical Analysis of Data Science Salaries in the U.S.
+# A Geographical Analysis of Data Science Salaries in the U.S.
 
-## Team Name: Regenstein  
-
-## Team Members:  
+## Members:  
 1. Zihua Chen, zihuachen@uchicago.edu
     * Coded the description_scrape.py and Glassdoor_scraper.py
     * Coded the Regressions.R file and generated the OLS tables, residual plots
@@ -19,15 +17,7 @@
     * Prepared outline of the presentation and details
     * Ran 1/3 of the glassdoor scraper file
 
-GitHub Repository Link: https://github.com/macs30122-winter23/final-project-regenstein.git
-
-Presentation Link: https://docs.google.com/presentation/d/1Cper_yfRjZK__c7YxIn292FF9H3kQw3V/edit#slide=id.p1
-
-Report Link: https://docs.google.com/document/d/1TT6yrqpJXYNmcfCKskp4852-RNLJ__Zi/edit
-
-Video Link: https://drive.google.com/file/d/1dPu9vp_m7htVEPQ6bEsfCC0J8goWgn_S/view?usp=share_link
-
-## Project Description
+## Introduction
 The central research question that this project aims to answer is what factors determine salaries of data scientists. Specifically, we are interested in determinants of wages that vary across geographical locations. This difference could be driven by differences in cost of living, number of qualified candidates, etc., or a combination of these factors.
 
 Wages in the labor market are determined by market forces of demand (companies) and supply (employees). On the demand side, higher productivity (e.g., highly educated workers) in the workforce means that companies can offer higher wages by hiring fewer workers for the same level of output. On the supply side, a higher cost of living and rental would require workers to demand higher salaries. We can observe the equilibrium wages through job listings platforms such as Glassdoor. Geographical variation in these market forces allow us to examine the importance of different factors in contributing to equilibrium wages.
