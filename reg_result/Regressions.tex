@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{tabularx,booktabs,geometry,graphicx,pdflscape}
+\renewcommand\tabularxcolumn[1]{>{\Centering}p{#1}}
+\geometry{a4paper,left=25mm,right=25mm,top=15mm,bottom=15mm}
+{\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+	
+\begin{document}
+	
+This document explains the empirical model we used. We used R to generate regression results because R has a package (stargazer) that formats regression output into tables that we show below. The following tables and graphs are all generated from R code.
+
+\bigskip
+
+For Table 1, we run the following model:
+$$
+Salary_i = \gamma StateCharacterstics_j + \epsilon_i
+$$
+where each unit of observation i is a job posting on glassdoor, and $StateCharacterstics_j$ is a state-level variable. We add variables incrementally.
+
+\bigskip \bigskip
+
+For Table 2, we run the following model:
+$$
+Salary_i = \gamma StateCharacterstics_j + \delta CompanyCharacteristics_k + \epsilon_i
+$$
+where each unit of observation i is a job posting on glassdoor, $StateCharacterstics_j$ are state-level variables, and $CompanyCharacterics_k$ are company-level variables. We add variables incrementally.
+
+\bigskip \bigskip
+
+For Table 3, we run the following model:
+$$
+Salary_i = \gamma StateCharacterstics_j + \delta CompanyCharacteristics_k + \beta JobCharacteristics_i + \epsilon_i
+$$
+where each unit of observation i is a job posting on glassdoor, $StateCharacterstics_j$ are state-level variables, $CompanyCharacterics_k$ are company-level variables, and $JobCharacteristics_i$ are job-posting-level variables. We add variables incrementally.
+
+\bigskip\bigskip
+We then plot the residuals against state-level variables including Monthly Median Owner Cost, Percentage Employed in Tech, and Percentage With College Degree for selected models (Table 1 Col 6, Table 2 Col 6, and Table 3 Col 2). We also plot the distribution of residuals for these selected models.
+	
+	
+	\begin{landscape}
+		\input{regressions1.tex}
+	\end{landscape}
+
+	\begin{landscape}
+		\input{regressions2.tex}
+	\end{landscape}
+
+	\input{regressions3.tex}
+	
+	\begin{figure}[h]
+	\caption{Residuals from model in Table (1) Column (6)}
+	\centering
+	\includegraphics[width=\textwidth]{residuals_check1.png}
+	\end{figure}
+
+	\begin{figure}[h]
+	\caption{Residuals from model in Table (2) Column (6)}
+	\centering
+	\includegraphics[width=\textwidth]{residuals_check2.png}
+	\end{figure}
+
+	\begin{figure}[h]
+	\caption{Residuals from model in Table (3) Column (2)}
+	\centering
+	\includegraphics[width=\textwidth]{residuals_check3.png}
+	\end{figure}
+
+	\begin{figure}[h]
+	\caption{Distribution of Residuals}
+	\centering
+	\includegraphics[width=\textwidth]{residuals_distribution.png}
+	\end{figure}
+	
+\end{document}
